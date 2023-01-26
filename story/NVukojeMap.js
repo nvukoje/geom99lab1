@@ -19,6 +19,7 @@ function initMap() {
     });
   
     flightPath.setMap(map);
-}
+  }
   
-window.initMap = initMap;
+  window.initMap = initMap;
+  
