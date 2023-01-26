@@ -1,7 +1,7 @@
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 4.85,
-      center: { lat: 56.825, lng: -30.992 },
+      zoom: 4.75,
+      center: { lat: 61.108, lng: -26.332 },
       mapTypeId: "terrain",
     });
     const flightPlanCoordinates = [
