@@ -20,6 +20,34 @@ function initMap() {
     });
   
     flightPath.setMap(map);
+
+    const NorwegianRoyalPalace = { lat: 59.917, lng: 10.725 };
+    const contentString =
+      '<div id="content">' +
+      '<div id="siteNotice">' +
+      "</div>" +
+      '<h1 id="firstHeading" class="firstHeading">The Royal Palace of Norway</h1>' +
+      '<div id="bodyContent">' +
+      "<p>Leif's journey began after converting to " +
+      "Christianity from King Olaf I Tryggvason of Norway</p>" +
+      "</div>" +
+      "</div>";
+    const infowindow = new google.maps.InfoWindow({
+      content: contentString,
+      ariaLabel: " NorwegianRoyalPalace",
+    });
+    const marker = new google.maps.Marker({
+      position:  NorwegianRoyalPalace,
+      map,
+      title: "Royal Palace of Norway",
+    });
+  
+    marker.addListener("click", () => {
+      infowindow.open({
+        anchor: marker,
+        map,
+      });
+    });
   }
   
   window.initMap = initMap;
