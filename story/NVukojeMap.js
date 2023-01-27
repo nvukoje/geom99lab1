@@ -49,7 +49,7 @@ function initMap() {
       });
     });
 
-    const FaroeIslands = { lat: 59.917, lng: 10.725 };
+    const FaroeIslands = { lat: 62.016, lng: -6.864 };
     const contentString1 =
       '<div id="content">' +
       '<div id="siteNotice">' +
