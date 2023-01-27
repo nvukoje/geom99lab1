@@ -34,7 +34,7 @@ function initMap() {
       "</div>";
     const infowindow = new google.maps.InfoWindow({
       content: contentString,
-      ariaLabel: " NorwegianRoyalPalace",
+      ariaLabel: "NorwegianRoyalPalace",
     });
     const marker = new google.maps.Marker({
       position:  NorwegianRoyalPalace,
@@ -45,6 +45,34 @@ function initMap() {
     marker.addListener("click", () => {
       infowindow.open({
         anchor: marker,
+        map,
+      });
+    });
+
+    const FaroeIslands = { lat: 59.917, lng: 10.725 };
+    const contentString1 =
+      '<div id="content">' +
+      '<div id="siteNotice">' +
+      "</div>" +
+      '<h1 id="firstHeading" class="firstHeading">The Faroe Islands</h1>' +
+      '<div id="bodyContent">' +
+      "<p>These islands were an itinerant place for " +
+      "many vikings on their travels, Leif Erikson included</p>" +
+      "</div>" +
+      "</div>";
+    const infowindow1 = new google.maps.InfoWindow({
+      content: contentString1,
+      ariaLabel: "FaroeIslands",
+    });
+    const marker1 = new google.maps.Marker({
+      position:  FaroeIslands,
+      map,
+      title: "The Faroe Islands",
+    });
+  
+    marker.addListener("click", () => {
+      infowindow1.open({
+        anchor: marker1,
         map,
       });
     });
