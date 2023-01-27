@@ -70,7 +70,7 @@ function initMap() {
       title: "The Faroe Islands",
     });
   
-    marker.addListener("click", () => {
+    marker1.addListener("click", () => {
       infowindow1.open({
         anchor: marker1,
         map,
